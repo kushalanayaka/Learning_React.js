@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body style="background-color: #212121; color: #ffff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+        const list = document.createElement('li')
+        list.innerHTML = `${langName}`
+        document.querySelector('.language')
+        .appendChild(list)
+        list.style.color = "orange"
+    }
+    addLang("python")
+    addLang('Java')
+    //optimised way
+    function addOptiLang(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+        li.style.color = "pink"
+    }
+    addOptiLang("TypeScript")
+
+    //Edit
+
+    const secondLan = document.querySelector('li:nth-child(2)')
+    // secondLan.innerHTML = "Go"
+    const newli = document.createElement('li')
+    newli.textContent = "Ruby"
+    newli.style.color = "yellow"
+    secondLan.replaceWith(newli)
+    
+    //Edit
+    const firstLang  = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    // remove
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>
