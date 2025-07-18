@@ -1,8 +1,10 @@
 # Projects related to DOM
-## project link
 
-## project 1 solution
 
+
+## project 1 - Color Changer 
+[Click here](https://stackblitz.com/edit/stackblitz-starters-yciupw29?description=HTML/CSS/JS%20Starter&file=1-Color_Changer%2Findex.html,1-Color_Changer%2Fstyles.css,1-Color_Changer%2Fmain.js&terminalHeight=10&title=Static%20Starter)
+```javascript 
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 
@@ -24,3 +26,4 @@ buttons.forEach(function (button) {
   });
 });
 
+```
