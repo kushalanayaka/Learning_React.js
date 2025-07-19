@@ -3,7 +3,7 @@
 
 
 ## project 3 - Digit Clock
-[Click here](https://stackblitz.com/edit/stackblitz-starters-yciupw29?description=HTML/CSS/JS%20Starter&file=3-Digit_Clock%2Findex.html,3-Digit_Clock%2Fmain.js&terminalHeight=10&title=Static%20Starter) 
+[Click here](https://stackblitz.com/edit/stackblitz-starters-yciupw29?file=3-DigitalClock%2Findex.html,3-DigitalClock%2Fmain.js) 
 
 
 ```javascript
