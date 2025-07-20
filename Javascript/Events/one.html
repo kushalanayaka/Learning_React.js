@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learning html  Events</title>
+
+</head>
+<body>
+
+  <h1 style="text-align:center;">Image Gallery</h1>
+
+ <ul class="images">
+  <li>
+    <img width="200px" id="mountain" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" 
+         alt="Mountain Landscape by Unsplash">
+  </li>
+  <li>
+    <img width="200px" id="ocean" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" 
+        alt="Ocean Waves by Unsplash">
+  </li>
+  <li>
+    <img width="200px" id="cityscape" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" 
+         alt="Cityscape by Unsplash">
+  </li>
+  <li>
+    <img width="200px" id="forest" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80" 
+         alt="Forest Path by Unsplash">
+  </li>
+  <li><a style="color: aqua ;" href="https://www.google.com/" id="google" >Google</a></li>
+</ul>
+</body>
+<script>
+    /*// document.getElementById('ocean').onclick = function(){
+    //     alert('Clicked on ocean')
+    // } //normal approach
+    // attachEvent()
+    // jQuery - On
+    //The concepts should know in EVENT
+    // type, timestamp, defualtPrevented
+    // clientX, clientY, screenX, screenY
+    //altKey, ctrlKey, shiftKey, keyCode
+
+    //when we use 'false' its called bubbling method - inner element to outer element
+    document.querySelector('.images').addEventListener('click', function(e){
+      console.log("Clicked on the Ul");
+    },false)
+    //if nothing is there in the place of false , its always be ' false' 
+    
+    document.getElementById('ocean').addEventListener('click', function(e){
+      console.log("Clicked on the Ocean");
+      e.stopPropagation()
+    },false)
+
+    //when we use 'true' its called Capturing method - outer element to outer  element
+    document.querySelector('.images').addEventListener('click', function(e){
+      // console.log("Clicked on the Ul");
+    },true)
+    //if nothing is there in the place of false , its always be ' false' 
+    
+    document.getElementById('ocean').addEventListener('click', function(e){
+      // console.log("Clicked on the Ocean");
+    },true)
+
+    document.querySelector('#google').addEventListener('click', function(e){
+      e.preventDefault()
+      e.stopPropagation()
+      console.log("Google Clicked")
+    })*/
+
+   document.querySelector('.images').addEventListener('click', function(e) {
+    // console.log(e); 
+    // console.log(e.target);
+    if(e.target.tagName === 'IMG'){
+        console.log(e.target.id);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    }
+    // console.log(e.target.tagName);
+    
+    // removeIt.parentNode.removeChild(removeIt)
+    
+   }, false)
+</script>
+</html>
