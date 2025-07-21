@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+</head>
+<body style="background-color: #212121;">
+    <h1 style="text-align: center; color: aliceblue;">API</h1>
+</body>
+<script>
+
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        const data = xhr.readyState
+        if (data === 4) {
+            console.log(this.responseText);
+            const text = JSON.parse(this.responseText) //Api provides the data in string type(most of the times) parse user to covert to object type from string
+            console.log(typeof text);
+            console.log(text.followers);
+            
+            
+        } 
+    }
+    xhr.send();
+</script>
+</html>
