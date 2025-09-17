@@ -1,0 +1,60 @@
+/* App.css */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f8f9fa;
+    height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: #e2e8f0; /* light gray background */
+}
+
+.form-wrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+    margin-bottom: 16px;
+}
+
+.swap-button-wrapper {
+    text-align: center;
+    margin: 12px 0;
+}
+
+.swap-button {
+    padding: 6px 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.convert-button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.convert-button:hover,
+.swap-button:hover {
+    background: #0056b3;
+}
